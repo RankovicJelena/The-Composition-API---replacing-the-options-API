@@ -2,6 +2,7 @@
   <section class="container">
     <h2>{{ user.name }}</h2>
     <h3>{{ user.age }}</h3>
+    <button @click="setAge">Change Age</button>
   </section>
 </template>
 
@@ -16,19 +17,23 @@ export default {
       name: 'Jelena',
       age: 36,
     });
-    setTimeout(function () {
-      // uName.value = 'Jeca';
-      // uAge.value = 37;
-      user.name = 'Jeca';
-      user.age = 37;
-    }, 2000);
 
-    return { user: user };
+    function setNewAge() {
+      user.age = 37;
+    }
+
+    return { user: user, setAge: setNewAge };
   },
   // data() {
   //   return {
   //     userName: 'Maximilian',
+  //     age: 37
   //   };
+  // },
+  // methods:{
+  //   setNewAge(){
+  //     this.age = 36;
+  //   }
   // },
 };
 </script>
