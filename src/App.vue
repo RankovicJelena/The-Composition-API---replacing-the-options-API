@@ -4,6 +4,7 @@
       :first-name="firstName"
       :last-name="lastName"
       :age="age"
+      class="test"
     ></user-data>
     <h2>{{ userName }}</h2>
     <h3>{{ age }}</h3>
